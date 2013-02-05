@@ -1,0 +1,60 @@
+#choose your own adventure / Ruby in Ahz
+
+puts "Before we get started, please tell me your name..."
+name = gets.chomp.capitalize 
+puts "You are standing in front of a house. There is a mailbox here. You see a path to the East and a path to the West. (You can Open Mailbox, East, West, or Look)"
+path = gets.chomp.downcase
+
+if (path == "open mailbox" || path == "open" || path == "mailbox")
+  print "You open the mailbox. Inside is a letter... it's covered in cobwebs (must have been here for a while). Wait, it's addressed to... #{name}! Do you want read it!? ('Yes or No')" 
+    read = gets.chomp.downcase
+    puts "(you don't have the letter... it's still in the mailbox. Maybe we should get it out first. What do you say? (Yes or No)"
+    gets_it = gets.chomp.downcase
+        if (read == "yes" && gets_it == "yes")
+            puts "\n" "\n" "You carefully open the letter... it's postmarked 12 October 1984"
+            puts "\n" "It's a Chain Letter! Wow! I haven't seen one of these in years!"
+      	puts "\n" "Dear #{name}, " 
+            puts "\n" "This is a lucky chain letter!! Please make 14 copies of this letter and add your name and address to the bottom of the list." 
+            puts "\n" "Address 7 copies to last 7 people on the list, enclose one dollar and mail it within 7 days." 
+            puts "\n" "Address the other 7 copies to people you know and send it within 7 days."
+            puts " "
+            puts "PS Look out behind you!!!"
+            puts " "
+            puts "Suddenly, from out of nowhere you hear a horrible scratchy growling sound and feel a loud whooshing wind... your final thoughts are 'what in the world is that horrible smell?' "
+            puts "\n" "\n" "Newspaper Headline: #{name} Squashed by Troll for Breakfast Jam"
+		else
+			print "You close up the mailbox. You figure the postman should be here soon, and you'll receive it in 5 to 7 days. You can read it then (but, it looks as though the postman hasn't been here in quite a looonnnngggg time...)"
+		end
+
+
+elsif (path == "east")
+  print "You head East into the forest. You are standing in a clearing. You see a path to the west and a tall tree. You hear a rustle in the bushes. Sounds like a troll... "
+  puts "do you want to CLIMB the tree or FIGHT?"
+  troll = gets.chomp.downcase
+  if (troll == "climb") 
+	puts "Do you have your climbing clothes on? (Yes or No)"
+	clothes = gets.chomp.downcase
+	puts "What about your climbing shoes? Did you wear those, too!? (Yes or No)"
+	shoes = gets.chomp.downcase
+	if (clothes == "yes" || shoes == "yes")
+	  print "Whew! Good thing you were wearing the right gear. You escaped the troll!"
+	else
+	  print "Drat! Sadly, because you didn't have the right gear on, you died... seems next time you go tromping through the forest, you should think about perparation!"
+	end	
+  elsif (troll == "fight")
+    print "How silly of you to think you could fight a troll... what do you think this is, a fairytale?! Try again."
+  else 
+    print "Because you couldn't make up your mind and hence stood here so long without moving, that troll shot out of the bushes and squashed you into jelly for his pie... next time, get moving!"
+  end
+ 
+elsif (path == "west")
+  print "You start along the path to the west, but find that the road suddenly falls off into the abyss. You die."
+	
+elsif (path == "look")
+  print "Because you stood here so long without moving, a meteor came along and squashed you... next time, get moving!"
+
+else
+  print "I am sorry, my babelfish seems to be under some stress. I didn't understand your request. Please start over" 
+end
+
+
