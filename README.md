@@ -1,4 +1,4 @@
 xmetryx
 =======
 
-my work in progress
+random work - some in progress, some holding
